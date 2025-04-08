@@ -1,64 +1,75 @@
-# cloud-devops-fastapi-k8s
+# FastAPI with Docker and PostgreSQL
 
-FastAPI Project with Docker & PostgreSQL
+This project is a simple FastAPI application configured with Docker and PostgreSQL.
 
-Overview
-This project is a simple FastAPI application running with PostgreSQL in Docker. It includes API endpoints, database interaction, and basic testing using pytest.
+## Features
+- FastAPI backend
+- PostgreSQL database
+- Dockerized development environment
+- Health check endpoint (`/health`)
 
-Features
-FastAPI for building RESTful APIs
+## Prerequisites
+- Docker
+- Docker Compose
 
-PostgreSQL for data storage
+## Getting Started
 
-Docker for containerization
+### 1. Clone the Repository
 
-Pytest for automated testing
-
-Prerequisites
-Docker and Docker Compose installed
-
-Python 3.12 (for development)
-
-Getting Started
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
-Build and run the application using Docker Compose:
-
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
+2. Build and Start the Containers
 bash
 Copy
 Edit
 docker-compose up --build
-The application will be available at:
+This will build the Docker images and start the application along with the PostgreSQL container.
 
-API: http://localhost:8000
+3. Access the Application
+Once the containers are up and running, you can access the FastAPI application at:
 
-Health check endpoint: http://localhost:8000/health
+arduino
+Copy
+Edit
+http://localhost:8000
+You can also check the health endpoint:
 
-Running Tests
-To run tests, use the following command:
+bash
+Copy
+Edit
+http://localhost:8000/health
+4. Run Tests
+To run tests using pytest, use:
 
 bash
 Copy
 Edit
 docker-compose run test
-This will run pytest against the /tests directory.
+Project Structure
+css
+Copy
+Edit
+├── app
+│   ├── db.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── __pycache__
+├── docker-compose.yml
+├── Dockerfile
+├── tests
+│   └── test_main.py
+└── README.md
+Environment Variables
+POSTGRES_USER: PostgreSQL username (default: devuser)
 
-Endpoints
-GET /health - Check if the app is running (returns {"status": "OK"}).
+POSTGRES_PASSWORD: PostgreSQL password (default: devpass)
 
-Other API Endpoints - (Add any relevant API documentation here).
+POSTGRES_DB: PostgreSQL database name (default: devdb)
 
-Technologies Used
-FastAPI: For building the API.
+Built With
+FastAPI
 
-PostgreSQL: For database storage.
+PostgreSQL
 
-Docker: For containerization.
-
-pytest: For testing.
-
+Docker
