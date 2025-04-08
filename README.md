@@ -19,7 +19,7 @@ The project demonstrates web development, containerization, and database integra
 - Docker
 - Docker Compose
 
-## Getting Started
+## Project Walkthrough
 ```bash
 ## 1. Clone the Repository
 
