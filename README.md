@@ -1,6 +1,13 @@
 # FastAPI with Docker and PostgreSQL
 
-This project is a simple FastAPI application configured with Docker and PostgreSQL.
+This project showcases skills in building a FastAPI web application with Docker and PostgreSQL. I used:
+- **FastAPI** for building a fast and modern API.
+- **Docker** for containerizing the app and PostgreSQL database.
+- **PostgreSQL** for data storage and integration.
+- **pytest** for automated testing to ensure functionality.
+
+The project demonstrates web development, containerization, and database integration best practices.
+
 
 ## Features
 - FastAPI backend
@@ -13,43 +20,31 @@ This project is a simple FastAPI application configured with Docker and PostgreS
 - Docker Compose
 
 ## Getting Started
-
-### 1. Clone the Repository
-
 ```bash
+## 1. Clone the Repository
+
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
-2. Build and Start the Containers
-bash
-Copy
-Edit
+
+## 2. Build and Start the Containers
+
 docker-compose up --build
 This will build the Docker images and start the application along with the PostgreSQL container.
 
-3. Access the Application
+## 3. Access the Application
 Once the containers are up and running, you can access the FastAPI application at:
 
-arduino
-Copy
-Edit
 http://localhost:8000
 You can also check the health endpoint:
 
-bash
-Copy
-Edit
 http://localhost:8000/health
-4. Run Tests
+## 4. Run Tests
 To run tests using pytest, use:
 
-bash
-Copy
-Edit
 docker-compose run test
-Project Structure
-css
-Copy
-Edit
+
+## Project Structure
+
 ├── app
 │   ├── db.py
 │   ├── main.py
@@ -60,14 +55,16 @@ Edit
 ├── tests
 │   └── test_main.py
 └── README.md
-Environment Variables
+
+## Environment Variables
 POSTGRES_USER: PostgreSQL username (default: devuser)
 
 POSTGRES_PASSWORD: PostgreSQL password (default: devpass)
 
 POSTGRES_DB: PostgreSQL database name (default: devdb)
 
-Built With
+## Built With
+
 FastAPI
 
 PostgreSQL
